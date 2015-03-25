@@ -1,5 +1,4 @@
 module ImageIO
+using ColorTypes
 
-# package code goes here
-
-end # module
+end
