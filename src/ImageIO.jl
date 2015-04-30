@@ -3,6 +3,7 @@ using ColorTypes, Compat, FileIO
 include("types.jl")
 
 export Image
+export AbstractImage
 using ImageMagick
 importall ImageMagick, FileIO
 

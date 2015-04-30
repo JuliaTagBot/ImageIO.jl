@@ -82,8 +82,8 @@ end
 colorspace{C<:Color}(img::AbstractMatrix{C}) = string(C.name.name)
 colorspace{C<:Color}(img::AbstractArray{C,3}) = string(C.name.name)
 colorspace{C<:Color}(img::AbstractImage{C}) = string(C.name.name)
-colorspace{C<:Color,T}(img::AbstractArray{AbstractAlphaColorValue{C,T},2}) = (S = string(C.name.name); S == "Gray" ? "GrayAlpha" : string(S, "A"))
-colorspace{C<:Color,T}(img::AbstractImage{AbstractAlphaColorValue{C,T}}) = (S = string(C.name.name); S == "Gray" ? "GrayAlpha" : string(S, "A"))
+colorspace{C<:Color,T}(img::AbstractArray{AbstractAlphaColor{C,T},2}) = (S = string(C.name.name); S == "Gray" ? "GrayAlpha" : string(S, "A"))
+colorspace{C<:Color,T}(img::AbstractImage{AbstractAlphaColor{C,T}}) = (S = string(C.name.name); S == "Gray" ? "GrayAlpha" : string(S, "A"))
 colorspace(img::AbstractMatrix{Bool}) = "Binary"
 colorspace(img::AbstractArray{Bool}) = "Binary"
 colorspace(img::AbstractArray{Bool,3}) = "Binary"
